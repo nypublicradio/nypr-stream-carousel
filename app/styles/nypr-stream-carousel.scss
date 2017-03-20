@@ -1,0 +1,103 @@
+@import "compass/css3/flexbox";
+
+@import "nypr-ui/vars";
+@import "nypr-ui/colors";
+@import "nypr-ui/icons";
+
+.stream-carousel {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 20%;
+  margin-bottom: 0;
+  position: relative;
+  margin-top: -25px;
+  color: white;
+  padding: 20px;
+
+  @include filter-container;
+
+  &:before {
+    @include classic-filter($filter--light);
+    background-color: $filter--dark;
+  }
+}
+
+.slide-header {
+  @include fontsize(18);
+  font-weight: 600;
+  margin-bottom: 10px;
+  @include flexbox((
+    display: flex,
+    flex-direction: column,
+    align-items: center
+  ));
+
+}
+
+.slide-header__title {
+  margin-bottom: 5px;
+}
+
+.slide-header__arrow {
+  @include arrow--down;
+}
+
+.slide-body {
+  @include fontsize(14);
+  line-height: 24px;
+  text-align: center;
+  @include flexbox((
+    display: flex,
+    flex-direction: column,
+    align-items: center
+  ));
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.slide-body__label {
+  @include fontsize(12);
+  text-transform: uppercase;
+
+  @include mq($desktop) {
+    @include fontsize(14);
+  }
+}
+
+.slide-body__title {
+  @include fontsize(18);
+  font-weight: 600;
+  @include flexbox((
+    display: flex,
+    flex-direction: column,
+    align-items: center
+  ));
+  line-height: 24px;
+  margin-bottom: 7px;
+  position: relative;
+
+  @include mq($desktop) {
+    @include fontsize(24);
+    line-height: 2rem;
+    @include flexbox((
+      flex-direction: row,
+      align-items: baseline
+    ));
+
+    > a {
+      margin-left: 10px;
+    }
+  }
+}
+
+.slide-footer {
+  @include flexbox((
+    display: flex,
+    flex-direction: column,
+    align-items: center
+  ));
+  
+  > .listen-button {
+    margin-bottom: 10px;
+  }
+}
