@@ -101,3 +101,37 @@
     margin-bottom: 10px;
   }
 }
+
+.swiper-container {
+  height: 350px;
+}
+
+.swiper-slide {
+  @include flexbox((
+    display: flex,
+    flex-direction: column,
+    justify-content: center,
+    align-items: center
+  ));
+  height: 280px;
+  margin-top: 10px;
+
+  > div {
+    @include flexbox((
+      display: flex,
+      flex-direction: column,
+      align-items: center
+    ));
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #00aeff;
+  opacity: 0.5;
+  width: 13px;
+  height: 13px;
+
+  &-active {
+    opacity: 1;
+  }
+}
