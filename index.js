@@ -3,4 +3,5 @@
 
 module.exports = {
   name: 'nypr-stream-carousel',
+  isDevelopingAddon: () => true
 };
