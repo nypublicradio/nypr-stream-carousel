@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'stream-carousel'
+  name: 'nypr-stream-carousel',
 };

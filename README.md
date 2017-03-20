@@ -1,11 +1,11 @@
-# stream-carousel
+# nypr-stream-carousel
 
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd stream-carousel`
+* `cd nypr-stream-carousel`
 * `npm install`
 * `bower install`
 
