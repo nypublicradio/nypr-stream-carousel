@@ -1,4 +1,6 @@
 {
   "name": "nypr-stream-carousel",
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "~3.4.1"
+  }
 }
