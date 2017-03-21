@@ -1,7 +1,7 @@
 {
   "name": "nypr-stream-carousel",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A carousel display of live streams from New York Public Radio.",
   "keywords": [
     "ember-addon"
   ],
@@ -11,7 +11,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/nypublicradio/nypr-stream-carousel",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
