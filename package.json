@@ -44,7 +44,7 @@
     "ember-sinon-qunit": "1.4.1",
     "ember-source": "~2.11.0",
     "loader.js": "^4.0.10",
-    "nypr-ui": "nypublicradio/nypr-ui#marine/wqxr"
+    "nypr-ui": "nypublicradio/nypr-ui"
   },
   "engines": {
     "node": ">= 0.12.0"
