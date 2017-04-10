@@ -1,4 +1,4 @@
-{{#swiper-container grabCursor=true pagination=true spaceBetween=30 registerAs=streamCarousel}}
+{{#swiper-container grabCursor=true pagination=true navigation=true spaceBetween=30 registerAs=streamCarousel}}
   {{#each streams as |stream|}}
     {{#swiper-slide}}
       {{yield stream (hash
