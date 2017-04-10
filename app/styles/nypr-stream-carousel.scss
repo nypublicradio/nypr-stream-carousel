@@ -96,7 +96,7 @@
     flex-direction: column,
     align-items: center
   ));
-  
+
   > .listen-button {
     margin-bottom: 10px;
   }
@@ -134,4 +134,12 @@
   &-active {
     opacity: 1;
   }
+}
+
+.swiper-button-prev {
+  background-image: url('/nypr-stream-carousel/images/arrow--left.svg');
+}
+
+.swiper-button-next {
+  background-image: url('/nypr-stream-carousel/images/arrow--right.svg');
 }
