@@ -1,24 +1,11 @@
 {{#swiper-container grabCursor=true pagination=true navigation=true spaceBetween=30 registerAs=streamCarousel}}
   {{#each streams as |stream|}}
     {{#swiper-slide}}
-      <h2 class="slide-header">
-        <div class="slide-header__title">{{stream.name}}</div>
-        <div class="slide-header__arrow"></div>
-      </h2>
-
-      <div class="slide-body">
-        <div class="slide-body__label">On Air Now</div>
-        <h3 class="slide-body__title">
-          {{stream.currentComposer.name}}
-          {{#if stream.currentComposer}}<br />{{/if}}
-          {{stream.currentPiece}}
-        </h3>
-      </div>
-
-      <div class="slide-footer">
-        {{yield stream}}
-      </div>
-
+      {{yield stream (hash
+        header=(component 'stream-carousel/header')
+        body=(component 'stream-carousel/body')
+        footer=(component 'stream-carousel/footer')
+      )}}
     {{/swiper-slide}}
   {{/each}}
 {{/swiper-container}}

@@ -37,3 +37,42 @@ test('it must call forceUpdate because streams are async', function() {
   this.set('doUpdate', this.mock().atLeast(1));
   this.render(hbs`{{stream-carousel doUpdate=doUpdate}}`);
 });
+
+test('yielded blocks', function(assert) {
+  this.set('streams', [{
+    name: 'foo',
+    piece: 'famous fugue',
+    frequency: '100 fm'
+  }, {
+    name: 'bar',
+    piece: 'low bass',
+    frequency: '90 fm'
+  }]);
+  this.render(hbs`
+    {{#stream-carousel streams=streams as |stream slide|}}
+      {{#slide.header}}
+        {{stream.name}}
+      {{/slide.header}}
+      
+      {{#slide.body}}
+        {{stream.piece}}
+      {{/slide.body}}
+      
+      {{#slide.footer}}
+        Listen to {{stream.frequency}}
+      {{/slide.footer}}
+    {{/stream-carousel}}
+  `);
+  
+  let headers = this.$('.slide-header');
+  assert.ok(headers.text().includes('foo'));
+  assert.ok(headers.text().includes('bar'));
+  
+  let bodies = this.$('.slide-body__title');
+  assert.ok(bodies.text().includes('famous fugue'));
+  assert.ok(bodies.text().includes('low bass'));
+  
+  let footers = this.$('.slide-footer');
+  assert.ok(footers.text().includes('100 fm'));
+  assert.ok(footers.text().includes('90 fm'));
+});
